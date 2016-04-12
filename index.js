@@ -12,5 +12,6 @@ const settings = {
 const bot = new Bot(settings);
 
 bot.on('start', function() {
-  bot.postMessageToChannel('bot-sandbox', 'Buenos dias. Mi llamo Lopez');
+  console.log('Bot started');
+  bot.postMessageToChannel('bot-sandbox', 'Buenos dias. Mi llamo Lopez -- eric');
 });
