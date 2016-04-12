@@ -1,15 +1,15 @@
-var fs = require('fs');
-var Bot = require('slackbots');
+const fs = require('fs');
+const Bot = require('slackbots');
 
 'use strict';
 
-var apiKey = fs.readFileSync('slackapi.key', 'utf8').trim();
-var settings = {
+const apiKey = process.env.SLACK_API_KEY;
+const settings = {
   token: apiKey,
   name: 'lopez'
 };
 
-var bot = new Bot(settings);
+const bot = new Bot(settings);
 
 bot.on('start', function() {
   bot.postMessageToChannel('bot-sandbox', 'Buenos dias. Mi llamo Lopez');
