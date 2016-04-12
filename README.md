@@ -4,7 +4,9 @@ Le slack bot for non-player-games fun time.
 
 ## Get Started
 
-Install [docker](https://docker.com). And run `startup.sh`
+1. Install [docker](https://docker.com).
+2. `cp example.env .env` and change slackbot api key inside
+3. Run `startup.sh`
 
 ## API Key
 Get your slack bot api key from Slack and put it into a file called slackapi.key
