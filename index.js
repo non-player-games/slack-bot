@@ -4,7 +4,7 @@ const Bot = require('slackbots');
 'use strict';
 
 const apiKey = process.env.SLACK_API_KEY;
-const channelName = 'bot-sandbox';
+const channelName = 'general';
 var channelId = null;
 const userName = 'lopez';
 var userId = null;
@@ -45,7 +45,7 @@ bot.on('message', function(message) {
       }
       else if(msgTime){
         var time = new Date();
-        var outMsg = "it is " + time.getHours() + ":" + time.getMinutes() + ":" + time.getSeconds(); 
+        var outMsg = "it is " + time.getHours() + ":" + time.getMinutes() + ":" + time.getSeconds() + " UTC"; 
         bot.postMessageToChannel(channelName, outMsg); 
       }
     }
@@ -58,9 +58,3 @@ bot.on('message', function(message) {
 });
 
 
-//sync.fiber(function() {
-//  var channelObj = callAPI('channels.join', {name: 'botland'}).channel;
-//  channelId = channelObj.id;
-//  console.log('Channel ' + channelId);
-//  bot.connect();
-//});
