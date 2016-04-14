@@ -49,9 +49,9 @@ bot.on('message', function(message) {
         bot.postMessageToChannel(channelName, outMsg); 
       }
     }
-    var msgJustDoIt = message.text.indexOf('should do it') > -1;
+    var msgJustDoIt = message.text.indexOf('do it') > -1;
     if(msgJustDoIt){
-      var outMsg = "JUST DO IT";
+      var outMsg = "http://media.riffsy.com/images/cd1470ea6370fc87a658a8d7e31e1d90/raw";
       bot.postMessageToChannel(channelName, outMsg); 
     }
   }
