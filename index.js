@@ -29,9 +29,9 @@ bot.on('close', function() {
 bot.on('open', function() {
   console.log('Bot connection started');
 
-  bot.on('message', function(msg) {
-    if (msg.text === 'ping') {
-      bot.postMessage(msg.channel, ping(), params);
+  bot.on('message', function(message) {
+    if (message.text === 'ping') {
+      bot.postMessage(message.channel, ping(), params);
     }
     // all ingoing events https://api.slack.com/rtm
     if(message.type === 'message'){
@@ -59,5 +59,5 @@ bot.on('open', function() {
 
 bot.on('start', function() {
   console.log('Bot started');
-  bot.postMessageToChannel('bot-sandbox', 'Buenos dias. Mi llamo Lopez');
+  bot.postMessageToChannel('bot-sandbox', 'Buenos dias. Mi llamo Lopez.');
 });
