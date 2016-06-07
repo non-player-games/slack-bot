@@ -2,4 +2,4 @@
 
 appId=$(docker ps | egrep  'npg-slackbot' | awk '{print $1}')
 echo "shutting down npg-slackbot app"
-docker kill ${appId}
+docker stop ${appId}

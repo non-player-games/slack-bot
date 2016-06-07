@@ -1,5 +1,5 @@
 #!/bin/bash
 
-docker build --rm=true -t npg-slackbot .
+docker build --rm=true -t npg-slackbot --build-arg SLACK_API_KEY=${SLACK_API_KEY} .
 
-docker run --env-file ./.env npg-slackbot
+docker run npg-slackbot
