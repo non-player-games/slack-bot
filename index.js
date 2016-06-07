@@ -5,6 +5,10 @@ const Bot = require('slackbots');
 const ping = require('./reactions/ping');
 
 const apiKey = process.env.SLACK_API_KEY;
+if(typeof apiKey === 'undefined' || apiKey === null){
+  console.log("Unable to find environment variable. Did you remember to source the file?");
+  process.exit(1);
+}
 const userName = 'lopez';
 var userId = null;
 const settings = {
