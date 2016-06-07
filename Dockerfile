@@ -15,5 +15,7 @@ RUN npm install
 
 # Copy source code over
 COPY . /usr/src/slackbot
+ARG SLACK_API_KEY
+ENV SLACK_API_KEY ${SLACK_API_KEY}
 
 CMD ["node", "index.js"]
