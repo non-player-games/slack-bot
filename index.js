@@ -41,21 +41,23 @@ bot.on('open', function() {
       if(calledByName){
         if(msgHelp){
           var outMsg = "Soy Lopez. Que necesitas?";
-          bot.postMessageToChannel(message.channel, outMsg);
+          bot.postMessage(message.channel, outMsg);
         }
         else if(msgTime){
           var time = new Date();
           var outMsg = "it is " + time.getHours() + ":" + time.getMinutes() + ":" + time.getSeconds() + " UTC";
-          bot.postMessageToChannel(message.channel, outMsg);
+          bot.postMessage(message.channel, outMsg);
         }
       }
       var msgJustDoIt = message.text.indexOf('do it') > -1;
       if(msgJustDoIt){
+        console.log("just do it");
         var outMsg = "http://media.riffsy.com/images/cd1470ea6370fc87a658a8d7e31e1d90/raw";
-        bot.postMessageToChannel(message.channel, outMsg);
+        bot.postMessage(message.channel, outMsg);
       }
     }
   });
+});
 
 bot.on('start', function() {
   console.log('Bot started');
