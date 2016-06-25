@@ -1,5 +1,3 @@
-'use strict';
-
 const fs = require('fs');
 const Bot = require('slackbots');
 const ping = require('./reactions/ping');
